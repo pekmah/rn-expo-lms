@@ -13,11 +13,18 @@ module.exports = {
         customGrey: "#6E6F79",
       },
       fontFamily: {
+        body: ["Poppins-Regular"], // Override default "sans"
+        head: ["Poppins-Regular"], // Override default "sans"
         poppins: ["Poppins_400Regular"],
-        primary: ["Poppins_400Regular"],
-        bold: ["Poppins_700Bold"],
-        semibold: ["Poppins_600SemiBold"],
-        medium: ["Poppins_500Medium"],
+
+        "poppins-bold": ["Poppins_700Bold"],
+        "poppins-regular": ["Poppins_400Regular"],
+        "poppins-medium": ["Poppins_500Medium"],
+        "poppins-semibold": ["Poppins_600SemiBold"],
+        400: ["Poppins_400Regular"],
+        500: ["Poppins_500Medium"],
+        600: ["Poppins_600SemiBold"],
+        700: ["Poppins_700Bold"],
       },
     },
   },

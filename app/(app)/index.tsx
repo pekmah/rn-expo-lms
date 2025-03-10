@@ -14,8 +14,8 @@ export default function Index() {
   ];
 
   return (
-    <View className="flex-1 bg-red-600">
-      <Text className="font-poppins font-bold">
+    <View className="flex-1 ">
+      <Text className="bg-red-500">
         Edit app/index.tsx to edit this screen.
       </Text>
       <View className="flex-row flex-wrap gap-10">
