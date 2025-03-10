@@ -13,7 +13,7 @@ import { Slot, SplashScreen } from "expo-router";
 import { useEffect } from "react";
 import { StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import "./global.css";
+import "../global.css";
 
 SplashScreen.preventAutoHideAsync();
 

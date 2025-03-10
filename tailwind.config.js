@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // NOTE: Update this to include the paths to all of your component files.
-  content: ["./app/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
@@ -11,6 +11,8 @@ module.exports = {
         primaryLight: "#E2E5F4",
         customWhite: "#F8F3EA",
         customGrey: "#6E6F79",
+        customLightGrey: "#F9F9F9",
+        placeHolderColor: "#ABABAB",
       },
       fontFamily: {
         body: ["Poppins-Regular"], // Override default "sans"
