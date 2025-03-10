@@ -6,9 +6,10 @@ type Variant = "default" | "primary" | "primaryLight";
 interface IconProps {
   children: React.ReactNode;
   variant?: Variant;
+  className?: string;
 }
 
-const Icon = ({ children, variant }: IconProps) => {
+const Icon = ({ children, variant, className }: IconProps) => {
   const variantStyles = {
     default: "aspect-square h-8 flex items-center justify-center rounded-sm",
     primary: "bg-primary",
@@ -18,10 +19,10 @@ const Icon = ({ children, variant }: IconProps) => {
   return (
     <View
       className={`
-    ${variantStyles.default}
-    ${variant ? variantStyles[variant] : ""}
-    
-    `}
+        ${variantStyles.default}
+        ${variant ? variantStyles[variant] : ""}
+        ${className}
+      `}
     >
       {children}
     </View>

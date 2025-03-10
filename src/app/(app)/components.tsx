@@ -3,6 +3,8 @@ import { Text, View } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
 import { CButton, CIcon, CInput, Wrapper } from "../../components/general";
+import ListItem from "@/components/general/list-item";
+import { WashingMachineSvg } from "@/svg";
 
 const components = () => {
   return (
@@ -74,7 +76,27 @@ const components = () => {
       </View>
 
       {/* list item */}
-      <View></View>
+      <View className="gap-1">
+        <View>
+          <Text className=" font-600 leading-1 mt-1 text-lg">Icon</Text>
+          <Text className="font-400 text-sm text-customGrey">
+            {`<CListItem/>`}: src/components/general/icon
+          </Text>
+        </View>
+
+        {/* list items */}
+        <View className="gap-3">
+          <ListItem
+            left={
+              <CIcon>
+                <WashingMachineSvg />
+              </CIcon>
+            }
+            description="Eric Pekmah laundry"
+            rightLabel="3 mins Left"
+          />
+        </View>
+      </View>
     </Wrapper>
   );
 };
