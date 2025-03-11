@@ -13,7 +13,7 @@ const Wrapper = <T extends boolean = false>({
   className = "",
   ...props
 }: WrapperProps<T>) => {
-  const defaultClassName = "flex-1 bg-white p-8";
+  const defaultClassName = "flex-1 bg-white p-7";
 
   if (isScrollable) {
     return (

@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 
 export default function Index() {
   if (true) {
-    return <Redirect href={"/components"} />;
+    return <Redirect href={"/auth"} />;
   }
 
   return (

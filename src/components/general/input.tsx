@@ -18,6 +18,7 @@ const Input = ({
   label,
   error,
   left,
+  right,
 
   labelClassName,
   errorClassName,
@@ -45,10 +46,11 @@ const Input = ({
         <TextInput
           className={`flex-1 px-3  font-400 text-base text-black pt-1 ${inputClassName}`}
           placeholder="Type here"
-          style={{ textAlignVertical: "center" }}
           placeholderTextColor={"#ABABAB"}
           {...rest}
         />
+
+        {right}
       </View>
 
       {error ? (

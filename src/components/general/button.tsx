@@ -5,20 +5,23 @@ type ButtonVariant = "primary" | "default" | "primaryLight"; // Add "primary" to
 
 interface ButtonProps extends TouchableOpacityProps {
   variant: ButtonVariant;
-
+  text: string;
   children?: React.ReactNode;
   className?: string;
   textClassName?: string;
+  left?: React.ReactNode;
 }
 
 const Button = ({
   variant = "default",
+  text,
   children,
   className,
   textClassName,
+  left,
 }: ButtonProps) => {
   const variantStyles = {
-    default: "min-h-[48] justify-center items-center rounded-lg",
+    default: "min-h-[48] justify-center items-center rounded-lg flex-row",
     primary: "bg-primary",
     primaryLight: "bg-primaryLight",
   };
@@ -33,13 +36,14 @@ const Button = ({
     <TouchableOpacity
       className={`${variantStyles.default} ${variantStyles[variant]} ${className}`}
     >
+      {left}
       {children ? (
         children
       ) : (
         <Text
           className={`${variantTextStyles.default} ${variantTextStyles[variant]} ${textClassName}`}
         >
-          Button
+          {text}
         </Text>
       )}
     </TouchableOpacity>
