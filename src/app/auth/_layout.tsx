@@ -11,14 +11,15 @@ const Layout = () => {
       <Stack.Screen
         name="index"
         options={{
+          ...navigationOptionsWithBack,
           title: "",
-          headerLeft: renderHeaderLeft,
-          headerShadowVisible: false,
-          headerTitleStyle: {
-            fontFamily: "Poppins_600SemiBold",
-            fontSize: 20,
-          },
-          headerTitleAlign: "center",
+        }}
+      />
+      <Stack.Screen
+        name="signup"
+        options={{
+          ...navigationOptionsWithBack,
+          title: "Create Account",
         }}
       />
     </Stack>
@@ -26,11 +27,22 @@ const Layout = () => {
 };
 
 export default Layout;
+
 const renderHeaderLeft = (props: NativeStackHeaderLeftProps) => (
   <HeaderLeft {...props} />
 );
 
-const HeaderLeft = ({ canGoBack }: NativeStackHeaderLeftProps) => {
+const navigationOptionsWithBack = {
+  headerLeft: renderHeaderLeft,
+  headerShadowVisible: false,
+  headerTitleStyle: {
+    fontFamily: "Poppins_600SemiBold",
+    fontSize: 18,
+  },
+  headerTitleAlign: "center" as "center",
+};
+
+export const HeaderLeft = ({ canGoBack }: NativeStackHeaderLeftProps) => {
   const router = useRouter();
 
   const handleGoBack = () => {

@@ -5,3 +5,4 @@ import CIcon from "./icon";
 import CListItem from "./list-item";
 
 export { Wrapper, CButton, CInput, CIcon, CListItem };
+export * from "./input";

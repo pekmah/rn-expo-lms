@@ -65,3 +65,12 @@ const Input = ({
 };
 
 export default Input;
+
+export const AuthInput = (props: InputProps) => (
+  <Input
+    labelClassName="px-1"
+    inputClassName="pt-3"
+    inputContainerClassName="bg-white rounded-xl"
+    {...props}
+  />
+);

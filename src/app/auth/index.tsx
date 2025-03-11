@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 
 import { CButton, CInput, Wrapper } from "@/components/general";
 import { GoogleSvg } from "@/svg";
+import { Link } from "expo-router";
 
 const Page = () => {
   return (
@@ -44,9 +45,11 @@ const Page = () => {
       {/* Don't have account text */}
       <Text className="text-center font-400 text-[13px] text-gray-500">
         Don't have an account?{" "}
-        <Text className="text-primary font-poppins-medium underline">
-          Sign up
-        </Text>
+        <Link asChild href="/auth/signup">
+          <Text className="text-primary font-poppins-medium underline">
+            Sign up
+          </Text>
+        </Link>
       </Text>
     </Wrapper>
   );

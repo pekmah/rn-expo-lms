@@ -20,9 +20,9 @@ const components = () => {
         </View>
 
         <View className="gap-3">
-          <CButton variant="primary" />
+          <CButton text="Button" variant="primary" />
 
-          <CButton variant="primaryLight" />
+          <CButton text="Button" variant="primaryLight" />
         </View>
       </View>
 
