@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
+import { Feather, MaterialIcons } from "@expo/vector-icons";
 
 import { CButton, CIcon, CInput, Wrapper } from "../../components/general";
 import ListItem from "@/components/general/list-item";
@@ -38,6 +38,18 @@ const components = () => {
         <View className="gap-3">
           <CInput label="Phone" />
           <CInput label="Error" error={"This is an error input message"} />
+          <CInput
+            inputClassName="pl-1"
+            placeholder="Search ..."
+            inputContainerClassName="bg-primary px-1"
+            left={
+              <View className="flex-row items-center justify-center">
+                <CIcon>
+                  <Feather color={"#ABABAB"} name="search" size={20} />
+                </CIcon>
+              </View>
+            }
+          />
         </View>
       </View>
 

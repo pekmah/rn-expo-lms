@@ -4,18 +4,26 @@ import { Text, TextInput, TextInputProps, View } from "react-native";
 interface InputProps extends TextInputProps {
   label?: string;
   error?: string | null;
+  left?: React.ReactNode;
+  right?: React.ReactNode;
 
   containerClassName?: string;
   labelClassName?: string;
   errorClassName?: string;
+  inputContainerClassName?: string;
+  inputClassName?: string;
 }
 
 const Input = ({
   label,
   error,
+  left,
+
   labelClassName,
   errorClassName,
   containerClassName,
+  inputContainerClassName,
+  inputClassName,
   ...rest
 }: InputProps) => {
   const errorInputStyle = error ? "border-red-600" : "border-gray-200";
@@ -30,10 +38,12 @@ const Input = ({
       ) : null}
 
       <View
-        className={`min-h-[48] rounded-lg bg-customLightGrey flex-row overflow-hidden border ${errorInputStyle}`}
+        className={`min-h-[48] rounded-lg bg-customLightGrey flex-row overflow-hidden border ${errorInputStyle} ${inputContainerClassName}`}
       >
+        {left}
+
         <TextInput
-          className="flex-1 px-3  font-400 text-base text-black"
+          className={`flex-1 px-3  font-400 text-base text-black pt-1 ${inputClassName}`}
           placeholder="Type here"
           style={{ textAlignVertical: "center" }}
           placeholderTextColor={"#ABABAB"}
