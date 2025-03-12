@@ -44,7 +44,7 @@ const Input = ({
         {left}
 
         <TextInput
-          className={`flex-1 px-3  font-400 text-base text-black pt-1 ${inputClassName}`}
+          className={`flex-1 px-3  font-400 text-base text-black android:pt-1 ${inputClassName}`}
           placeholder="Type here"
           placeholderTextColor={"#ABABAB"}
           {...rest}
@@ -69,7 +69,7 @@ export default Input;
 export const AuthInput = (props: InputProps) => (
   <Input
     labelClassName="px-1"
-    inputClassName="pt-3"
+    inputClassName={"android:pt-3"}
     inputContainerClassName="bg-white rounded-xl"
     {...props}
   />

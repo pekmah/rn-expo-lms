@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+import { cn } from "@/utils";
 import React from "react";
 import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 
@@ -34,14 +36,19 @@ const Button = ({
 
   return (
     <TouchableOpacity
-      className={`${variantStyles.default} ${variantStyles[variant]} ${className}`}
+      // className={`${variantStyles.default} ${variantStyles[variant]} ${className}`
+      className={cn(variantStyles.default, variantStyles[variant], className)}
     >
       {left}
       {children ? (
         children
       ) : (
         <Text
-          className={`${variantTextStyles.default} ${variantTextStyles[variant]} ${textClassName}`}
+          className={cn(
+            variantTextStyles.default,
+            variantTextStyles[variant],
+            textClassName
+          )}
         >
           {text}
         </Text>

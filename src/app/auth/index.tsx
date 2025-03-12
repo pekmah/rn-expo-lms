@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-import { CButton, CInput, Wrapper } from "@/components/general";
+import { AuthInput, CButton, Wrapper } from "@/components/general";
 import { GoogleSvg } from "@/svg";
 import { Link } from "expo-router";
 
@@ -17,19 +17,9 @@ const Page = () => {
         </Text>
       </View>
       <View className="py-2 gap-5">
-        <CInput
-          label="Email"
-          labelClassName="px-1"
-          inputClassName="pt-3"
-          inputContainerClassName="bg-white rounded-xl"
-        />
+        <AuthInput label="Email" placeholder="youremail@mail.com" />
 
-        <CInput
-          label="Password"
-          labelClassName="px-1"
-          inputClassName="pt-3"
-          inputContainerClassName="bg-white rounded-xl"
-        />
+        <AuthInput label="Password" placeholder="Password" />
       </View>
 
       <CButton variant="primary" className="my-5 rounded-full" text="Log In" />
@@ -38,7 +28,7 @@ const Page = () => {
         variant="default"
         className="mt-3 mb-5 border border-gray-300 rounded-full gap-3"
         text="Sign in with Google"
-        textClassName="text-gray-900 font-600"
+        textClassName="text-gray-900 font-500"
         left={<GoogleSvg />}
       />
 

@@ -21,14 +21,14 @@ const Page = () => {
       <CButton
         variant="primary"
         className="my-5 rounded-full"
-        text="Greate Account"
+        text="Create Account"
       />
 
       <CButton
         variant="default"
         className="mt-3 mb-5 border border-gray-300 rounded-full gap-3"
         text="Sign up with Google"
-        textClassName="text-gray-900 font-600"
+        textClassName="text-gray-900 font-500"
         left={<GoogleSvg />}
       />
 
