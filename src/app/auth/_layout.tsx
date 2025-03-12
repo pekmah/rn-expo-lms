@@ -22,6 +22,13 @@ const Layout = () => {
           title: "Create Account",
         }}
       />
+      <Stack.Screen
+        name="verification"
+        options={{
+          ...navigationOptionsWithBack,
+          title: "Verify Account",
+        }}
+      />
     </Stack>
   );
 };

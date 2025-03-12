@@ -1,11 +1,22 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 
 import { AuthInput, CButton, Wrapper } from "@/components/general";
 import { GoogleSvg } from "@/svg";
 
 const Page = () => {
+  const router = useRouter();
+
+  const handleVerify = () => {
+    router.push({
+      pathname: "./verification",
+      params: {
+        email: "youremail@mail.com",
+      },
+    });
+  };
+
   return (
     <Wrapper isScrollable className="py-2 gap-5 border border-t-slate-200">
       <View className="py-1 gap-5">
@@ -22,6 +33,7 @@ const Page = () => {
         variant="primary"
         className="my-5 rounded-full"
         text="Create Account"
+        onPress={handleVerify}
       />
 
       <CButton

@@ -21,6 +21,7 @@ const Button = ({
   className,
   textClassName,
   left,
+  ...rest
 }: ButtonProps) => {
   const variantStyles = {
     default: "min-h-[48] justify-center items-center rounded-lg flex-row",
@@ -36,8 +37,8 @@ const Button = ({
 
   return (
     <TouchableOpacity
-      // className={`${variantStyles.default} ${variantStyles[variant]} ${className}`
       className={cn(variantStyles.default, variantStyles[variant], className)}
+      {...rest}
     >
       {left}
       {children ? (
