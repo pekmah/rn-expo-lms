@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>400175060463-7secn27mdftjqr7hltvpfofcssevd4il.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.400175060463-7secn27mdftjqr7hltvpfofcssevd4il</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>400175060463-8oamf9tehu6vqmipcp9p9n1sm827j48f.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDdUJFFOP5E6XJfSk3LM_bOJnZ5BcxtWpo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>400175060463</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fualms.app</string>
+	<key>PROJECT_ID</key>
+	<string>cruiz-portfolio</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cruiz-portfolio.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:400175060463:ios:72d176cd9076f27efad21a</string>
+</dict>
+</plist>

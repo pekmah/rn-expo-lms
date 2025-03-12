@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Text, View } from "react-native";
 
 import { AuthInput, CButton, Wrapper } from "@/components/general";
 import { GoogleSvg } from "@/svg";
 import { Link } from "expo-router";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 
 const Page = () => {
+  const handleGoogleSignIn = useCallback(async () => {
+    console.log("SIGNIN");
+    // await GoogleSignin.hasPlayServices();
+    try {
+      const userInfo = await GoogleSignin.signIn();
+      console.log("userinfo", userInfo);
+    } catch (error) {
+      console.log("error", error);
+    }
+  }, []);
+
   return (
     <Wrapper isScrollable className="py-0 gap-5">
       <View className="pb-3">
@@ -30,6 +42,7 @@ const Page = () => {
         text="Sign in with Google"
         textClassName="text-gray-900 font-500"
         left={<GoogleSvg />}
+        onPress={handleGoogleSignIn}
       />
 
       {/* Don't have account text */}

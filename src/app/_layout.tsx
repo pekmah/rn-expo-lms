@@ -9,13 +9,22 @@ import {
   Poppins_700Bold_Italic,
   useFonts,
 } from "@expo-google-fonts/poppins";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { Slot, SplashScreen } from "expo-router";
 import { useEffect } from "react";
 import { StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+
 import "../global.css";
 
 SplashScreen.preventAutoHideAsync();
+
+GoogleSignin.configure({
+  scopes: [],
+  webClientId:
+    "400175060463-dh8n9vd74ruu62vur90ovarh5asc099r.apps.googleusercontent.com",
+  offlineAccess: true,
+});
 
 export default function Root() {
   let [fontsLoaded, fontError] = useFonts({
