@@ -1,22 +1,27 @@
 import React, { useCallback } from "react";
 import { Text, View } from "react-native";
+import { Link, useRouter } from "expo-router";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 
 import { AuthInput, CButton, Wrapper } from "@/components/general";
 import { GoogleSvg } from "@/svg";
-import { Link } from "expo-router";
-import { GoogleSignin } from "@react-native-google-signin/google-signin";
 
 const Page = () => {
+  const router = useRouter();
+
+  const handleSignin = useCallback(() => {
+    router.push("/(app)/shop-details");
+  }, [router]);
+
   const handleGoogleSignIn = useCallback(async () => {
-    console.log("SIGNIN");
-    // await GoogleSignin.hasPlayServices();
     try {
-      const userInfo = await GoogleSignin.signIn();
-      console.log("userinfo", userInfo);
+      await GoogleSignin.signIn();
+      handleSignin();
+      // console.log("userinfo", userInfo);
     } catch (error) {
       console.log("error", error);
     }
-  }, []);
+  }, [handleSignin]);
 
   return (
     <Wrapper isScrollable className="py-0 gap-5">
@@ -34,7 +39,12 @@ const Page = () => {
         <AuthInput label="Password" placeholder="Password" />
       </View>
 
-      <CButton variant="primary" className="my-5 rounded-full" text="Log In" />
+      <CButton
+        variant="primary"
+        className="my-5 rounded-full"
+        text="Log In"
+        onPress={handleSignin}
+      />
 
       <CButton
         variant="default"

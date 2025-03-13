@@ -1,3 +1,4 @@
+import { navigationOptionsWithBack } from "@/constants/navigation";
 import { Stack } from "expo-router";
 
 export default function Layout() {
@@ -7,6 +8,14 @@ export default function Layout() {
       <Stack.Screen name="index" />
       {/* components */}
       <Stack.Screen name="components" />
+
+      <Stack.Screen
+        name="shop-details"
+        options={{
+          ...navigationOptionsWithBack,
+          title: "Create Shop",
+        }}
+      />
     </Stack>
   );
 }
