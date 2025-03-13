@@ -6,6 +6,9 @@ export default function Layout() {
     <Stack screenOptions={{ headerShown: false }}>
       {/* index */}
       <Stack.Screen name="index" />
+
+      <Stack.Screen name="tabs" />
+
       {/* components */}
       <Stack.Screen name="components" />
 

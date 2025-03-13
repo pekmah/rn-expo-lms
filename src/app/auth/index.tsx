@@ -10,7 +10,7 @@ const Page = () => {
   const router = useRouter();
 
   const handleSignin = useCallback(() => {
-    router.push("/(app)/shop-details");
+    router.push("/(app)/tabs");
   }, [router]);
 
   const handleGoogleSignIn = useCallback(async () => {

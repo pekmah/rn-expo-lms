@@ -1,4 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+import { COLORS } from "./src/constants/colors";
+
+const {
+  primary,
+  primaryDark,
+  primaryLight,
+  customWhite,
+  customGrey,
+  customLightGrey,
+  placeHolderColor,
+} = COLORS;
+
 module.exports = {
   // NOTE: Update this to include the paths to all of your component files.
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -6,13 +18,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#3D4EB0",
-        primaryDark: "#0B1957",
-        primaryLight: "#E2E5F4",
-        customWhite: "#F8F3EA",
-        customGrey: "#6E6F79",
-        customLightGrey: "#F9F9F9",
-        placeHolderColor: "#ABABAB",
+        primary,
+        primaryDark,
+        primaryLight,
+        customWhite,
+        customGrey,
+        customLightGrey,
+        placeHolderColor,
       },
       fontFamily: {
         body: ["Poppins-Regular"], // Override default "sans"
